@@ -44,7 +44,45 @@
         align-items: center;
     }
     
-  
+  /* Fade-in animation for page load */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Scale-up animation for buttons */
+@keyframes scaleUp {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Smooth transitions for hover effects */
+* {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Apply animations to main container */
+.container {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Apply animations to headings */
+h1, h2, h3 {
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+/* Apply animations to buttons */
+button, .btn {
+    animation: scaleUp 0.5s ease-out forwards;
+    animation-delay: 0.6s;
+}
+
+/* Hover effects */
+button:hover, .btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
+}
     .badge img {
         width: 100%;
         height: 100%;
